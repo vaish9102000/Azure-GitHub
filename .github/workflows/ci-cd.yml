@@ -18,7 +18,7 @@ jobs:
       - name: Terraform Init and Apply
         run: |
           terraform init
-          terraform apply -auto-approve
+          terraform destroy -auto-approve
         env:
           ARM_CLIENT_ID: ${{ secrets.CLIENT_ID }}
           ARM_CLIENT_SECRET: ${{ secrets.CLIENT_SECRET }}
